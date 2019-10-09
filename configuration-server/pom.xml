@@ -9,10 +9,10 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>com.mmalkiew.example.esm</groupId>
-    <artifactId>account-service</artifactId>
+    <artifactId>configuration-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>account-service</name>
-    <description>Account Service</description>
+    <name>configuration-server</name>
+    <description>Configuration Server</description>
 
     <properties>
         <java.version>11</java.version>
@@ -21,8 +21,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
 
         <dependency>
