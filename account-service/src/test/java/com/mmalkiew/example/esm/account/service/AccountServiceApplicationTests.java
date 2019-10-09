@@ -1,4 +1,4 @@
-package com.mmalkiew.example.account.service;
+package com.mmalkiew.example.esm.account.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

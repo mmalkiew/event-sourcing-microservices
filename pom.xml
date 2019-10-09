@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.mmalkiew.example</groupId>
-	<artifactId>event-sourcing-microservices</artifactId>
+	<groupId>com.mmalkiew.example.esm</groupId>
+	<artifactId>parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>event-sourcing-microservices</name>
@@ -23,6 +23,7 @@
 	</properties>
 
 	<modules>
+		<module>configuration-server</module>
 		<module>discovery-service</module>
 		<module>account-service</module>
 	</modules>
