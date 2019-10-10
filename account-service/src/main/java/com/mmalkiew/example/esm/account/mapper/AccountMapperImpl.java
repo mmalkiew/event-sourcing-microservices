@@ -1,7 +1,7 @@
-package com.mmalkiew.example.esm.account.service.mapper;
+package com.mmalkiew.example.esm.account.mapper;
 
-import com.mmalkiew.example.esm.account.service.dto.AccountDto;
-import com.mmalkiew.example.esm.account.service.rest.AccountRest;
+import com.mmalkiew.example.esm.account.dto.AccountDto;
+import com.mmalkiew.example.esm.account.rest.AccountRest;
 import org.springframework.stereotype.Component;
 
 @Component

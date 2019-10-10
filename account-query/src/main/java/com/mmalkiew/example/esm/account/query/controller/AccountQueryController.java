@@ -1,9 +1,9 @@
 package com.mmalkiew.example.esm.account.query.controller;
 
 import com.mmalkiew.example.esm.account.query.service.AccountQueryService;
-import com.mmalkiew.example.esm.account.service.dto.AccountDto;
-import com.mmalkiew.example.esm.account.service.mapper.AccountMapper;
-import com.mmalkiew.example.esm.account.service.rest.AccountRest;
+import com.mmalkiew.example.esm.account.dto.AccountDto;
+import com.mmalkiew.example.esm.account.mapper.AccountMapper;
+import com.mmalkiew.example.esm.account.rest.AccountRest;
 import org.axonframework.config.ProcessingGroup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +28,7 @@ public class AccountQueryController {
     }
 
     @GetMapping("/{id}/details")
-    public AccountRest getAccDetails(@PathVariable("id") String id) {
+    public AccountRest getAccountDetails(@PathVariable("id") String id) {
         LOGGER.info("Account[{}] - get account details invoked", id);
         AccountDto accountDto = service.getAccountById(id);
         return mapper.mapToRest(accountDto);
