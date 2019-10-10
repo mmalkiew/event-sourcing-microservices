@@ -1,8 +1,8 @@
 package com.mmalkiew.example.esm.account.query.controller;
 
+import com.mmalkiew.example.esm.account.query.mapper.AccountQueryMapper;
 import com.mmalkiew.example.esm.account.query.service.AccountQueryService;
 import com.mmalkiew.example.esm.account.dto.AccountDto;
-import com.mmalkiew.example.esm.account.mapper.AccountMapper;
 import com.mmalkiew.example.esm.account.rest.AccountRest;
 import org.axonframework.config.ProcessingGroup;
 import org.slf4j.Logger;
@@ -20,9 +20,9 @@ public class AccountQueryController {
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountQueryController.class);
 
     private final AccountQueryService service;
-    private final AccountMapper mapper;
+    private final AccountQueryMapper mapper;
 
-    public AccountQueryController(AccountQueryService service, AccountMapper mapper) {
+    public AccountQueryController(AccountQueryService service, AccountQueryMapper mapper) {
         this.service = service;
         this.mapper = mapper;
     }
