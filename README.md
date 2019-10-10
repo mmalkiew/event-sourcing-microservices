@@ -3,3 +3,11 @@
 [![Build Status](https://travis-ci.org/mmalkiew/event-sourcing-microservices.svg?branch=master)](https://travis-ci.org/mmalkiew/event-sourcing-microservices)
 
 Event Sourcing Microservices Example with Spring and Docker
+
+
+# Services
+| Services | Port |
+|----------|------|
+|Discovery Service|8761|
+|Account Axon Query Service|8351|
+|Account Axon Command Service|8352|

@@ -9,10 +9,10 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>com.mmalkiew.example.esm</groupId>
-    <artifactId>account-query</artifactId>
+    <artifactId>account-command</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>account-query</name>
-    <description>Account Axon Query Service</description>
+    <name>account-command</name>
+    <description>Account Axon Command Service</description>
 
     <dependencies>
         <dependency>
@@ -38,6 +38,7 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!-- Problem with Axon Configuration -->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-devtools</artifactId>-->
