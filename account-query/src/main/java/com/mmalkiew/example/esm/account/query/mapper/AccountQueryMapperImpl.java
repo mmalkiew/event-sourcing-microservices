@@ -9,6 +9,12 @@ public class AccountQueryMapperImpl implements AccountQueryMapper {
 
     @Override
     public AccountRest mapToRest(AccountDto dto) {
-        return null;
+        AccountRest rest = new AccountRest();
+
+        rest.setId(dto.getId());
+        rest.setName(dto.getName());
+        rest.setBalance(dto.getBalance());
+
+        return rest;
     }
 }

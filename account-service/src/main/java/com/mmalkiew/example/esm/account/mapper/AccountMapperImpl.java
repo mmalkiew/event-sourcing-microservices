@@ -9,6 +9,10 @@ public class AccountMapperImpl implements AccountMapper {
 
     @Override
     public AccountDto mapToDto(Account account) {
-        return null;
+        return AccountDto.builder()
+                         .withId(account.getId())
+                         .withName(account.getName())
+                         .withBalance(account.getBalance())
+                         .build();
     }
 }
