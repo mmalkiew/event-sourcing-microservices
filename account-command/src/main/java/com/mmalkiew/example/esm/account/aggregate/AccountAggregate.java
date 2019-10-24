@@ -16,15 +16,15 @@ public class AccountAggregate {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountAggregate.class);
 
-    public AccountAggregate() {
-    }
-
     @AggregateIdentifier
     private String id;
 
+    public AccountAggregate() {
+    }
+
     @CommandHandler
     public AccountAggregate(CreateAccountCommand command) {
-        LOGGER.info("Command Handle: " + command.toString());
+        LOGGER.info("Command Handle: {}", command);
 
         apply(CreateAccountEvent.builder()
                                 .withId(command.getId())
@@ -35,7 +35,7 @@ public class AccountAggregate {
 
     @EventSourcingHandler
     public void handle(CreateAccountEvent event) {
-        LOGGER.info("Event Handle "+ event.toString());
+        LOGGER.info("Event Handle: {}", event);
         this.id = event.getId();
     }
 
