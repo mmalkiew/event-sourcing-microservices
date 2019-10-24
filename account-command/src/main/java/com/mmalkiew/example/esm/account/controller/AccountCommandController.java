@@ -3,6 +3,8 @@ package com.mmalkiew.example.esm.account.controller;
 import com.mmalkiew.example.esm.account.command.CreateAccountCommand;
 import com.mmalkiew.example.esm.account.request.CreateAccountRequest;
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,8 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping("/accounts")
 public class AccountCommandController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccountCommandController.class);
+
     private final CommandGateway commandGateway;
 
     public AccountCommandController(CommandGateway commandGateway) {
@@ -24,6 +28,7 @@ public class AccountCommandController {
     @PostMapping()
     public CompletableFuture<String> createAccount(@RequestBody CreateAccountRequest request) {
         String id = UUID.randomUUID().toString();
+        LOGGER.info("Account[{}] - create account command", id);
         return commandGateway.send(CreateAccountCommand.builder()
                                                        .withId(id)
                                                        .withName(request.getName())
