@@ -1,18 +1,16 @@
-package com.mmalkiew.example.esm.account.command;
+package com.mmalkiew.example.esm.account.event;
 
 import com.google.common.base.MoreObjects;
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 import java.math.BigDecimal;
 
-public class CreateAccountCommand {
+public class CreateAccountEvent {
 
-    @TargetAggregateIdentifier
     private String id;
     private String name;
     private BigDecimal balance;
 
-    private CreateAccountCommand(Builder builder) {
+    private CreateAccountEvent(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.balance = builder.balance;
@@ -67,8 +65,8 @@ public class CreateAccountCommand {
             return this;
         }
 
-        public CreateAccountCommand build() {
-            return new CreateAccountCommand(this);
+        public CreateAccountEvent build() {
+            return new CreateAccountEvent(this);
         }
     }
 }
