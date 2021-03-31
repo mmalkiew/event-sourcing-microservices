@@ -22,7 +22,7 @@
 		<java.version>11</java.version>
 		<spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 		<axon-framework.version>4.2</axon-framework.version>
-		<google.guava.version>28.1-jre</google.guava.version>
+		<google.guava.version>29.0-jre</google.guava.version>
 	</properties>
 
 	<modules>
